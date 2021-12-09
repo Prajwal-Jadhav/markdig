@@ -17,7 +17,7 @@ namespace Markdig.Extensions.Mathematics
         {
             if (renderer.EnableHtmlForInline)
             {
-                renderer.Write("<span").WriteAttributes(obj).Write(">\\(");
+                renderer.Write("<span").WriteAttributes(obj).Write(@">\\(");
             }
 
             if (renderer.EnableHtmlEscape)
@@ -31,7 +31,7 @@ namespace Markdig.Extensions.Mathematics
 
             if (renderer.EnableHtmlForInline)
             {
-                renderer.Write("\\)</span>");
+                renderer.Write(@"\\)</span>");
             }
         }
     }
