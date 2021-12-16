@@ -19,14 +19,14 @@ namespace Markdig.Extensions.Mathematics
             if (renderer.EnableHtmlForBlock)
             {
                 renderer.Write("<div").WriteAttributes(obj).WriteLine(">");
-                renderer.WriteLine(@"\\[");
+                renderer.WriteLine(" $$ ");
             }
 
             renderer.WriteLeafRawLines(obj, true, renderer.EnableHtmlEscape);
 
             if (renderer.EnableHtmlForBlock)
             {
-                renderer.Write(@"\\]");
+                renderer.Write(" $$ ");
                 renderer.WriteLine("</div>");
             }
         }
